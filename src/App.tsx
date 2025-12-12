@@ -479,6 +479,15 @@ function App() {
             Clarity in every word
           </motion.p>
           
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.6 }}
+            className="text-white/70 text-sm mt-2"
+          >
+            v1.0.0 by Lunetix
+          </motion.p>
+          
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -853,6 +862,9 @@ function App() {
             <div className="p-4 border-t border-gray-200 bg-gray-50">
               <div className="text-center text-sm text-gray-500 font-medium">
                 {notes.length} {notes.length === 1 ? 'Note' : 'Notes'}
+              </div>
+              <div className="text-center text-xs text-gray-400 mt-1">
+                Lunotes v1.0.0 by Lunetix
               </div>
             </div>
           </motion.div>

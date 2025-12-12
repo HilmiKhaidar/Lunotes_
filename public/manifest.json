@@ -1,7 +1,7 @@
 {
-  "name": "Lunotes - Simple Notes",
+  "name": "Lunotes v1.0.0 by Lunetix",
   "short_name": "Lunotes",
-  "description": "Simple and beautiful note-taking app",
+  "description": "Simple and beautiful note-taking app v1.0.0",
   "theme_color": "#FBBF24",
   "background_color": "#FBBF24",
   "display": "standalone",
