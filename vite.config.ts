@@ -9,15 +9,17 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'Lunotes - Simple Notes',
+        name: 'Lunotes v1.0.0 by Lunetix',
         short_name: 'Lunotes',
-        description: 'Simple and beautiful note-taking app',
+        description: 'Simple and beautiful note-taking app v1.0.0',
         theme_color: '#FBBF24',
         background_color: '#FBBF24',
         display: 'standalone',
         orientation: 'portrait',
         scope: '/',
         start_url: '/',
+        lang: 'en',
+        dir: 'ltr',
         categories: ['productivity', 'utilities'],
         icons: [
           {
@@ -37,7 +39,7 @@ export default defineConfig({
             purpose: 'any'
           },
           {
-            src: 'maskable-icon-512x512.png',
+            src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable'
