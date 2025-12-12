@@ -11,12 +11,12 @@
     <preference name="android-targetSdkVersion" value="33" />
     
     <platform name="android">
-        <icon density="ldpi" src="public/pwa-64x64.png" />
-        <icon density="mdpi" src="public/pwa-64x64.png" />
-        <icon density="hdpi" src="public/pwa-192x192.png" />
-        <icon density="xhdpi" src="public/pwa-192x192.png" />
-        <icon density="xxhdpi" src="public/pwa-512x512.png" />
-        <icon density="xxxhdpi" src="public/pwa-512x512.png" />
+        <icon density="ldpi" src="res/icon/android/ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+        <icon density="xxhdpi" src="res/icon/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png" />
     </platform>
     
     <access origin="*" />

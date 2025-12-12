@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunotes Brand Guidelines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: #F9FAFB;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 20px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        .nav {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #6B7280;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        
+        .nav a:hover {
+            color: #F59E0B;
+            background: #FEF3C7;
+        }
+        
+        .section {
+            padding: 60px 0;
+            background: white;
+            margin-bottom: 2px;
+        }
+        
+        .section:nth-child(even) {
+            background: #F9FAFB;
+        }
+        
+        .section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #374151;
+            margin: 30px 0 15px 0;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #E5E7EB;
+        }
+        
+        .color-swatch {
+            width: 100%;
+            height: 80px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .color-info {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .color-info strong {
+            display: block;
+            margin-bottom: 4px;
+            color: #1F2937;
+        }
+        
+        .logo-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+            border-radius: 16px;
+            margin: 20px 0;
+        }
+        
+        .logo-showcase .logo {
+            color: white;
+            text-align: center;
+        }
+        
+        .logo-showcase .logo-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+        }
+        
+        .logo-showcase .logo-text {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .logo-showcase .logo-tagline {
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+        
+        .typography-sample {
+            border-left: 4px solid #FBBF24;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        
+        .font-h1 { font-size: 48px; font-weight: 700; line-height: 1.2; }
+        .font-h2 { font-size: 36px; font-weight: 600; line-height: 1.3; }
+        .font-h3 { font-size: 24px; font-weight: 600; line-height: 1.4; }
+        .font-body { font-size: 16px; font-weight: 400; line-height: 1.5; }
+        .font-small { font-size: 14px; font-weight: 400; line-height: 1.4; }
+        
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .do, .dont {
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid;
+        }
+        
+        .do {
+            background: #F0FDF4;
+            border-color: #10B981;
+        }
+        
+        .dont {
+            background: #FEF2F2;
+            border-color: #EF4444;
+        }
+        
+        .do h4, .dont h4 {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .do h4 {
+            color: #10B981;
+        }
+        
+        .dont h4 {
+            color: #EF4444;
+        }
+        
+        .do ul, .dont ul {
+            list-style: none;
+        }
+        
+        .do li::before {
+            content: "✅ ";
+            margin-right: 8px;
+        }
+        
+        .dont li::before {
+            content: "❌ ";
+            margin-right: 8px;
+        }
+        
+        .brand-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .value-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1F2937;
+            margin-bottom: 8px;
+        }
+        
+        .value-card p {
+            font-size: 14px;
+            color: #6B7280;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 36px; }
+            .section h2 { font-size: 28px; }
+            .nav ul { flex-direction: column; align-items: center; }
+            .do-dont { grid-template-columns: 1fr; }
+            .logo-showcase .logo-text { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Lunotes Brand Guidelines</h1>
+            <p>Beautiful note-taking made simple</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#logo">Logo</a></li>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#voice">Voice & Tone</a></li>
+                <li><a href="#usage">Usage</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="overview" class="section">
+        <div class="container">
+            <h2>Brand Overview</h2>
+            
+            <div class="brand-values">
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h4>Simplicity</h4>
+                    <p>Clean, uncluttered design that focuses on content</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎨</div>
+                    <h4>Beauty</h4>
+                    <p>Aesthetically pleasing interface that inspires creativity</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔒</div>
+                    <h4>Reliability</h4>
+                    <p>Consistent performance and data security</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">♿</div>
+                    <h4>Accessibility</h4>
+                    <p>Inclusive design for all users</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h4>Innovation</h4>
+                    <p>Modern technology with thoughtful features</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="logo" class="section">
+        <div class="container">
+            <h2>Logo & Visual Identity</h2>
+            
+            <div class="logo-showcase">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="logo-text">LUNOTES</div>
+                    <div class="logo-tagline">by Lunetix</div>
+                </div>
+            </div>
+
+            <h3>Logo Construction</h3>
+            <ul>
+                <li><strong>Icon Size:</strong> 25% of total logo width</li>
+                <li><strong>Text Size:</strong> 75% of total logo width</li>
+                <li><strong>Spacing:</strong> 0.5x icon width between elements</li>
+                <li><strong>Minimum Size:</strong> 120px width (horizontal), 64px (icon-only)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="colors" class="section">
+        <div class="container">
+            <h2>Color Palette</h2>
+            
+            <h3>Primary Colors</h3>
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="color-swatch" style="background: #FBBF24;">#FBBF24</div>
+                    <div class="color-info">
+                        <strong>Brand Yellow</strong>
+                        RGB: 251, 191, 36<br>
+                        HSL: 45°, 95%, 56%<br>
+                        Usage: Primary buttons, highlights
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: #F59E0B;">#F59E0B</div>
+                    <div class="color-info">
+                        <strong>Brand Orange</strong>
+                        RGB: 245, 158, 11<br>
+                        HSL: 37°, 92%, 50%<br>
+                        Usage: Gradients, hover states
+                    </div>
+                </div>
+            </div>
+
+            <h3>Neutral Colors</h3>
+            <div class="grid grid-4">
+                <div class="card">
+                    <div class="color-swatch" style="background: #1F2937; color: white;">#1F2937</div>
+                    <div class="color-info">
+                        <strong>Gray 900</strong>
+                        Primary text, headings
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: #374151; color: white;">#374151</div>
+                    <div class="color-info">
+                        <strong>Gray 700</strong>
+                        Secondary text, body copy
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: #6B7280; color: white;">#6B7280</div>
+                    <div class="color-info">
+                        <strong>Gray 500</strong>
+                        Muted text, placeholders
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: #F3F4F6; color: #374151;">#F3F4F6</div>
+                    <div class="color-info">
+                        <strong>Gray 100</strong>
+                        Light backgrounds
+                    </div>
+                </div>
+            </div>
+
+            <h3>Accent Colors</h3>
+            <div class="grid grid-4">
+                <div class="card">
+                    <div class="color-swatch" style="background: #3B82F6;">#3B82F6</div>
+                    <div class="color-info">
+                        <strong>Blue</strong>
+                        Work, professional
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: #10B981;">#10B981</div>
+                    <div class="color-info">
+                        <strong>Green</strong>
+                        Personal, health
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: #EF4444;">#EF4444</div>
+                    <div class="color-info">
+                        <strong>Red</strong>
+                        Urgent, important
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: #8B5CF6;">#8B5CF6</div>
+                    <div class="color-info">
+                        <strong>Purple</strong>
+                        Creative, ideas
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="typography" class="section">
+        <div class="container">
+            <h2>Typography</h2>
+            
+            <h3>Font Family: Inter</h3>
+            <p>Modern, clean, highly legible sans-serif font optimized for digital interfaces.</p>
+
+            <div class="typography-sample">
+                <div class="font-h1" style="color: #1F2937;">Heading 1 - 48px Bold</div>
+                <div class="font-h2" style="color: #374151;">Heading 2 - 36px Semibold</div>
+                <div class="font-h3" style="color: #4B5563;">Heading 3 - 24px Semibold</div>
+                <div class="font-body" style="color: #374151;">Body Text - 16px Regular. This is how regular paragraph text should look in the Lunotes interface. It should be easy to read and comfortable for extended reading sessions.</div>
+                <div class="font-small" style="color: #6B7280;">Small Text - 14px Regular. Used for captions, labels, and secondary information.</div>
+            </div>
+
+            <h3>Font Weights</h3>
+            <ul>
+                <li><strong>Regular (400):</strong> Body text, descriptions</li>
+                <li><strong>Medium (500):</strong> Subheadings, labels</li>
+                <li><strong>Semibold (600):</strong> Section headers</li>
+                <li><strong>Bold (700):</strong> Page titles, primary headings</li>
+                <li><strong>Black (900):</strong> Brand name, hero text</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="voice" class="section">
+        <div class="container">
+            <h2>Voice & Tone</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Brand Voice</h3>
+                    <p><strong>Friendly Professional</strong> - Approachable yet competent, helpful without being condescending.</p>
+                    
+                    <h4 style="margin-top: 20px;">Characteristics:</h4>
+                    <ul>
+                        <li><strong>Helpful:</strong> Provide clear, actionable guidance</li>
+                        <li><strong>Confident:</strong> Use definitive language when appropriate</li>
+                        <li><strong>Warm:</strong> Use inclusive, welcoming language</li>
+                        <li><strong>Clear:</strong> Avoid jargon and technical terms</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Example Messages</h3>
+                    <div style="background: #F0FDF4; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                        <strong>✅ Good:</strong><br>
+                        "Transform your thoughts into beautiful, organized notes"
+                    </div>
+                    <div style="background: #F0FDF4; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                        <strong>✅ Good:</strong><br>
+                        "Your ideas deserve a beautiful home"
+                    </div>
+                    <div style="background: #FEF2F2; padding: 15px; border-radius: 8px;">
+                        <strong>❌ Avoid:</strong><br>
+                        "Utilize our advanced note-taking solution for optimal productivity"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usage" class="section">
+        <div class="container">
+            <h2>Usage Guidelines</h2>
+            
+            <div class="do-dont">
+                <div class="do">
+                    <h4>✅ Do</h4>
+                    <ul>
+                        <li>Use the logo with adequate white space</li>
+                        <li>Maintain consistent logo proportions</li>
+                        <li>Use approved color combinations</li>
+                        <li>Follow typography hierarchy</li>
+                        <li>Use friendly, helpful language</li>
+                        <li>Ensure sufficient color contrast</li>
+                    </ul>
+                </div>
+                
+                <div class="dont">
+                    <h4>❌ Don't</h4>
+                    <ul>
+                        <li>Stretch or distort the logo</li>
+                        <li>Use colors outside the palette</li>
+                        <li>Use fonts other than Inter</li>
+                        <li>Place logo on busy backgrounds</li>
+                        <li>Use technical jargon unnecessarily</li>
+                        <li>Use low contrast color combinations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section" style="background: #1F2937; color: white; text-align: center;">
+        <div class="container">
+            <h2 style="color: white;">Brand Contact</h2>
+            <p style="margin-bottom: 20px;">For brand usage questions or asset requests:</p>
+            <p><strong>Email:</strong> brand@lunetix.com</p>
+            <p><strong>Website:</strong> https://lunetix.com</p>
+            <p style="margin-top: 30px; opacity: 0.7;">© 2025 Lunetix. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
