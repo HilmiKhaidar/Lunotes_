@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.lunetix.lunotes" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Lunotes</name>
+    <description>Simple and beautiful note-taking app by Lunetix</description>
+    <author email="support@lunetix.com" href="https://lunetix.com">Lunetix Team</author>
+    
+    <content src="index.html" />
+    
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="21" />
+    <preference name="android-targetSdkVersion" value="33" />
+    
+    <platform name="android">
+        <icon density="ldpi" src="public/pwa-64x64.png" />
+        <icon density="mdpi" src="public/pwa-64x64.png" />
+        <icon density="hdpi" src="public/pwa-192x192.png" />
+        <icon density="xhdpi" src="public/pwa-192x192.png" />
+        <icon density="xxhdpi" src="public/pwa-512x512.png" />
+        <icon density="xxxhdpi" src="public/pwa-512x512.png" />
+    </platform>
+    
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>
