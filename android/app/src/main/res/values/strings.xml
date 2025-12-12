@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Lunotes</string>
+    <string name="title_activity_main">Lunotes by Lunetix</string>
+    <string name="package_name">com.lunetix.lunotes</string>
+    <string name="custom_url_scheme">com.lunetix.lunotes</string>
+</resources>
